@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:ShoppingListAW4E.ViewModels"
+             x:Class="ShoppingListAW4E.Views.CategoriesPage"
+             x:Name="CategoryPage"
+             Title="Kategorie">
+
+    <ContentPage.BindingContext>
+        <viewmodel:CategoriesViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Label Text="Kategorie produktow"
+               FontSize="22"
+               FontAttributes="Bold"/>
+
+            <Entry Placeholder="Nowa kategoria"
+               Text="{Binding NewCategoryName}"/>
+
+            <Button Text="Dodaj kategorie"
+                Command="{Binding AddCategoryCommand}"/>
+
+            <Label Text="Kategorie" FontSize="22" FontAttributes="Bold"/>
+
+            <CollectionView ItemsSource="{Binding Categories}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <VerticalStackLayout Padding="10">
+
+                            <Button Text="{Binding Name}"
+                        FontSize="18"
+                        Command="{Binding BindingContext.ToggleCategoryCommand,
+                                  Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                        CommandParameter="{Binding}" />
+
+                            <CollectionView ItemsSource="{Binding Products}"
+                                IsVisible="{Binding IsExpanded}"
+                                Margin="20,0,0,0">
+
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Label Text="{Binding Name}" />
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+
+                            </CollectionView>
+
+                        </VerticalStackLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
