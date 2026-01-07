@@ -27,13 +27,28 @@ namespace ShoppingListAW4E.Views
             }
         }
 
+        ShoppingListViewModel? FindShoppingListViewModel()
+        {
+            Element element = this;
+
+            while (element != null)
+            {
+                if (element.BindingContext is ShoppingListViewModel foundViewModel)
+                    return foundViewModel;
+
+                element = element.Parent;
+            }
+
+            return null;
+        }
+
         void OnBoughtClicked(object sender, EventArgs e)
         {
             if (BindingContext is not Product product)
                 return;
 
-            ContentPage contentPage = Application.Current?.MainPage as ContentPage;
-            if (contentPage != null && contentPage.BindingContext is ShoppingListViewModel shoppingListViewModel)
+            ShoppingListViewModel? shoppingListViewModel = FindShoppingListViewModel();
+            if (shoppingListViewModel != null)
             {
                 shoppingListViewModel.ToggleBought(product);
             }
@@ -41,8 +56,11 @@ namespace ShoppingListAW4E.Views
 
         void OnRemoveClicked(object sender, EventArgs e)
         {
-            ContentPage contentPage = Application.Current?.MainPage as ContentPage;
-            if (contentPage != null && contentPage.BindingContext is ShoppingListViewModel shoppingListViewModel && BindingContext is Product product)
+            if (BindingContext is not Product product)
+                return;
+
+            ShoppingListViewModel? shoppingListViewModel = FindShoppingListViewModel();
+            if (shoppingListViewModel != null)
             {
                 shoppingListViewModel.RemoveProduct(product);
             }
