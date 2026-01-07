@@ -29,7 +29,7 @@ namespace ShoppingListAW4E.Models
             }
         }
 
-        public ObservableCollection<Product> Products { get; set; } = new();
+        public ObservableCollection<Product> Products { get; set; } = new ObservableCollection<Product>();
 
         public Category(string name)
         {
