@@ -1,0 +1,60 @@
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace ShoppingListAW4E.Models
+{
+    // Klasa reprezentuje Kategorię produktów.
+    // Wyjaśnienie prostym językiem:
+    // - Kategoria to grupa produktów (np. "Owoce").
+    // - Każda kategoria przechowuje swoją nazwę, informację czy jest rozwinięta na ekranie
+    // oraz listę produktów należących do tej kategorii.
+    // - Implementujemy interfejs INotifyPropertyChanged, dzięki któremu aplikacja
+    // wie, kiedy właściwości (np. nazwa lub stan rozwinięcia) się zmieniają i może
+    // automatycznie zaktualizować widok.
+    public class Category : INotifyPropertyChanged
+    {
+        string name;
+        bool isExpanded;
+
+        // Nazwa kategorii (np. "Warzywa").
+        public string Name
+        {
+            get => name;
+            set
+            {
+                name = value;
+                OnPropertyChanged();
+            }
+        }
+
+        // Czy lista produktów w tej kategorii jest widoczna (rozwinięta) na ekranie.
+        public bool IsExpanded
+        {
+            get => isExpanded;
+            set
+            {
+                isExpanded = value;
+                OnPropertyChanged();
+            }
+        }
+
+        // Lista produktów przypisanych do tej kategorii.
+        // ObservableCollection informuje interfejs o zmianach (dodanie/usunięcie elementu).
+        public ObservableCollection<Product> Products { get; set; } = new();
+
+        // Konstruktor ustawiający nazwę kategorii przy tworzeniu.
+        public Category(string name)
+        {
+            Name = name;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // Metoda wywoływana, gdy zmieni się któraś właściwość.
+        void OnPropertyChanged([CallerMemberName] string name = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+    }
+}

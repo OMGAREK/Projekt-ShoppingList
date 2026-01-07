@@ -1,0 +1,82 @@
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace ShoppingListAW4E.Models
+{
+    // KLASA: Category
+    // Bardzo szczegółowe wyjaśnienie (dla osoby, która nie zna programowania):
+    // - Ta klasa reprezentuje jedną kategorię produktów, np. "Owoce" lub "Nabiał".
+    // - Obiekt klasy Category to po prostu zbiór informacji o kategorii:
+    // * jej nazwa (pole Name)
+    // * czy na ekranie jej lista produktów jest widoczna czy ukryta (IsExpanded)
+    // * lista produktów należących do tej kategorii (Products)
+    // - Dlaczego to jest potrzebne: aplikacja pokazuje kategorie i po kliknięciu
+    // rozwija listę produktów w danej kategorii. Musimy więc przechować te dane
+    // w jednym obiekcie, aby łatwo nimi zarządzać.
+    // - Mechanizm powiadamiania widoku (INotifyPropertyChanged):
+    // Kiedy zmienimy nazwę kategorii lub stan IsExpanded, chcemy, aby ekran
+    // automatycznie zaktualizował to co pokazuje. Dzięki INotifyPropertyChanged
+    // system wie, że dana właściwość się zmieniła i odświeża odpowiednie elementy UI.
+    public class Category : INotifyPropertyChanged
+    {
+        // Prywatne pole przechowujące nazwę; używamy go we właściwości Name
+        string name;
+        // Prywatne pole informujące, czy kategoria jest rozwinięta
+        bool isExpanded;
+
+        // WŁAŚCIWOŚĆ: Name
+        // - Zwraca lub ustawia nazwę kategorii.
+        // - Gdy ustawimy nową wartość, wywoływana jest metoda OnPropertyChanged,
+        // która powiadamia interfejs, że coś się zmieniło i trzeba odświeżyć widok.
+        public string Name
+        {
+            get => name;
+            set
+            {
+                name = value;
+                OnPropertyChanged();
+            }
+        }
+
+        // WŁAŚCIWOŚĆ: IsExpanded
+        // - Określa, czy widoczna jest lista produktów w tej kategorii.
+        // - Wartość true oznacza: produkty są widoczne (rozwinięte), false: zwinięte.
+        // - Zmiana tej właściwości również powiadamia widok o konieczności odświeżenia.
+        public bool IsExpanded
+        {
+            get => isExpanded;
+            set
+            {
+                isExpanded = value;
+                OnPropertyChanged();
+            }
+        }
+
+        // Kolekcja produktów należących do tej kategorii.
+        // ObservableCollection automatycznie powiadamia widok, gdy dodamy lub
+        // usuniemy produkt z tej listy, dlatego UI zaktualizuje się bez dodatkowego kodu.
+        public ObservableCollection<Product> Products { get; set; } = new();
+
+        // KONSTRUKTOR
+        // Tworzy obiekt Category z podaną nazwą.
+        public Category(string name)
+        {
+            Name = name;
+        }
+
+        // WYDARZENIE: PropertyChanged
+        // - To mechanizm wykorzystywany przez INotifyPropertyChanged.
+        // - Gdy wywołamy OnPropertyChanged, powiadamiamy wszystkie zainteresowane
+        // elementy (np. elementy UI), że dana właściwość uległa zmianie.
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // METODA: OnPropertyChanged
+        // - Wywołanie tej metody informuje system, że wartość właściwości (np. Name)
+        // się zmieniła. Parametr name zawiera nazwę właściwości (np. "Name").
+        void OnPropertyChanged([CallerMemberName] string name = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+    }
+}

@@ -1,0 +1,84 @@
+﻿using ShoppingListAW4E.Models;
+using ShoppingListAW4E.ViewModels;
+using System;
+
+namespace ShoppingListAW4E.Views
+{
+    // Ten plik definiuje widok pojedynczego produktu (ProductView).
+    // Wyjaśnienie dla osoby niemającej doświadczenia w programowaniu:
+    // - "Widok" to element interfejsu, który pokazuje informacje o jednym produkcie.
+    // - Zawiera przyciski do zwiększania/zmniejszania ilości, oznaczania jako kupione oraz usuwania.
+    public partial class ProductView : ContentView
+    {
+        public ProductView()
+        {
+            InitializeComponent();
+        }
+
+        // Obsługa kliknięcia przycisku "-" (zmniejsz ilość).
+        void OnDecreaseClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is Product product && product.Quantity > 0)
+            {
+                product.Quantity--;
+            }
+        }
+
+        // Obsługa kliknięcia przycisku "+" (zwiększ ilość).
+        void OnIncreaseClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is Product product)
+            {
+                product.Quantity++;
+            }
+        }
+
+        // Obsługa kliknięcia przycisku "Kupione".
+        // Znajdujemy ViewModel (logikę aplikacji) i prosimy go o zmianę stanu produktu.
+        void OnBoughtClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is not Product product)
+                return;
+
+            Element parent = this.Parent;
+            while (parent != null && parent is not ContentPage)
+                parent = parent.Parent;
+
+            if (parent is ContentPage page && page.BindingContext is ShoppingListViewModel vm)
+            {
+                // Prosimy logikę aplikacji o przestawienie produktu jako kupionego/niekupionego
+                vm.ToggleBought(product);
+
+                try
+                {
+                    // Po zmianie kolejności próbujemy przewinąć listę do pozycji produktu.
+                    Element el = this;
+                    while (el != null && el is not CollectionView)
+                        el = el.Parent;
+
+                    if (el is CollectionView cv)
+                    {
+                        cv.ScrollTo(product, position: ScrollToPosition.End, animate: true);
+                    }
+                }
+                catch
+                {
+                    // Jeśli przewinięcie się nie uda, nic strasznego — to tylko dodatek.
+                }
+            }
+        }
+
+        // Obsługa usuwania produktu z listy.
+        void OnRemoveClicked(object sender, EventArgs e)
+        {
+            Element parent = this.Parent;
+            while (parent != null && parent is not ContentPage)
+                parent = parent.Parent;
+
+            if (parent is ContentPage page && page.BindingContext is ShoppingListViewModel vm && BindingContext is Product product)
+            {
+                vm.RemoveProduct(product);
+            }
+        }
+    }
+}

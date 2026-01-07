@@ -1,0 +1,91 @@
+﻿using ShoppingListAW4E.Models;
+using ShoppingListAW4E.ViewModels;
+using System;
+
+namespace ShoppingListAW4E.Views
+{
+    // ProductView to widok prezentujący pojedynczy produkt na liście zakupów.
+    // Ten plik zawiera metody obsługi przycisków (zmniejsz/zwieksz ilość, kupione, usuń).
+    public partial class ProductView : ContentView
+    {
+        public ProductView()
+        {
+            InitializeComponent(); // inicjalizuje elementy zdefiniowane w pliku XAML powiązanym z tym widokiem
+        }
+
+        // METODA: OnDecreaseClicked
+        // - Wywoływana, gdy użytkownik kliknie przycisk zmniejszania ilości.
+        // - Sprawdzamy BindingContext -> to obiekt Product powiązany z tym widokiem.
+        // - Jeśli ilość produktu jest większa niż0, zmniejszamy ją o1.
+        void OnDecreaseClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is Product product && product.Quantity >0)
+            {
+                product.Quantity--; // zmniejsz ilość o1; UI zaktualizuje się automatycznie
+            }
+        }
+
+        // METODA: OnIncreaseClicked
+        // - Wywoływana po naciśnięciu przycisku zwiększania ilości.
+        // - Znajdujemy powiązany produkt i zwiększamy jego ilość o1.
+        void OnIncreaseClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is Product product)
+            {
+                product.Quantity++; // zwiększ ilość o1
+            }
+        }
+
+        // METODA: OnBoughtClicked
+        // - Obsługuje kliknięcie przycisku oznaczającego produkt jako kupiony/odznaczenie.
+        // - Upraszczamy: zakładamy tylko jedna strona i jeden ViewModel, nie używamy 'var'.
+        void OnBoughtClicked(object sender, EventArgs e)
+        {
+            // jeśli brak powiązanego produktu, nic nie rób
+            if (BindingContext is not Product product)
+                return;
+
+            // Pobierz główną stronę aplikacji i rzutuj na ContentPage (jedna strona w aplikacji)
+            ContentPage page = Application.Current?.MainPage as ContentPage;
+            if (page != null && page.BindingContext is ShoppingListViewModel vm)
+            {
+                // Poproś ViewModel o przełączenie stanu kupione/niekupione
+                vm.ToggleBought(product);
+
+                try
+                {
+                    // Spróbuj znaleźć CollectionView w hierarchii i przewinąć go do produktu
+                    CollectionView cv = FindCollectionView(this);
+                    if (cv != null)
+                    {
+                        cv.ScrollTo(product, position: ScrollToPosition.End, animate: true);
+                    }
+                }
+                catch
+                {
+                    // Ignoruj błędy przewijania
+                }
+            }
+        }
+
+        // METODA: OnRemoveClicked
+        // - Obsługuje usuwanie produktu po kliknięciu przycisku usuń.
+        // - Upraszczona obsługa usuwania produktu przy założeniu jednej strony i jednego ViewModelu
+        void OnRemoveClicked(object sender, EventArgs e)
+        {
+            ContentPage page = Application.Current?.MainPage as ContentPage;
+            if (page != null && page.BindingContext is ShoppingListViewModel vm && BindingContext is Product product)
+            {
+                vm.RemoveProduct(product); // poproś ViewModel o usunięcie produktu
+            }
+        }
+
+        // POMOCNICZA: znajdź CollectionView przodka zaczynając od elementu el
+        CollectionView FindCollectionView(Element el)
+        {
+            while (el != null && !(el is CollectionView))
+                el = el.Parent;
+            return el as CollectionView;
+        }
+    }
+}

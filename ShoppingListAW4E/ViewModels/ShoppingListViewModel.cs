@@ -1,100 +1,206 @@
 ﻿using ShoppingListAW4E.Models;
 using System.Collections.ObjectModel;
 using System.Text.Json;
-using System.Windows.Input;
+using System.Linq;
+using System.IO;
 
 namespace ShoppingListAW4E.ViewModels
 {
     public class ShoppingListViewModel
     {
-        private const string ProductFile = "products.json";
-        private const string CategoryFile = "categories.json";
+        const string ProductFile = "products.json";
+        const string CategoryFile = "categories.json";
 
-        public ObservableCollection<Product> Products { get; set; }
         public ObservableCollection<Category> Categories { get; set; }
+        public ObservableCollection<Product> Products { get; set; }
 
+        public string NewCategoryName { get; set; }
         public string NewProductName { get; set; }
         public string NewProductUnit { get; set; }
-        public int NewProductQuantity { get; set; } = 1;
+        public int NewProductQuantity { get; set; } =1;
 
         public Category SelectedCategory { get; set; }
-
-        public ICommand AddProductCommand { get; }
-        public ICommand RemoveProductCommand { get; }
-        public ICommand ToggleBoughtCommand { get; }
 
         public ShoppingListViewModel()
         {
             Categories = LoadCategories();
             Products = LoadProducts();
 
-            AddProductCommand = new Command(AddProduct);
-            RemoveProductCommand = new Command<Product>(RemoveProduct);
-            ToggleBoughtCommand = new Command<Product>(ToggleBought);
+            foreach (Category categoryItem in Categories)
+            {
+                categoryItem.IsExpanded = false;
+            }
+
+            if (Categories.Count ==0)
+            {
+                Categories.Add(new Category("Warzywa") { IsExpanded = false });
+                Categories.Add(new Category("Owoce") { IsExpanded = false });
+                Categories.Add(new Category("Nabiał") { IsExpanded = false });
+                Categories.Add(new Category("Chemia") { IsExpanded = false });
+                SaveCategories();
+            }
+
+            LoadProductsIntoCategories();
         }
 
-        private void AddProduct()
+        public void ToggleCategory(Category category)
         {
-            if (string.IsNullOrWhiteSpace(NewProductName) ||
-                string.IsNullOrWhiteSpace(NewProductUnit) ||
-                SelectedCategory == null)
+            if (category == null)
                 return;
 
-            Products.Add(new Product
+            category.IsExpanded = !category.IsExpanded;
+        }
+
+        public void AddCategory()
+        {
+            if (string.IsNullOrWhiteSpace(NewCategoryName))
+                return;
+
+            Categories.Add(new Category(NewCategoryName) { IsExpanded = false });
+            NewCategoryName = string.Empty;
+            SaveCategories();
+        }
+
+        public void RemoveCategory(Category category)
+        {
+            if (category == null)
+                return;
+
+            for (int i = Products.Count -1; i >=0; i--)
+            {
+                if (Products[i].CategoryName == category.Name)
+                    Products.RemoveAt(i);
+            }
+
+            Categories.Remove(category);
+            SaveProducts();
+            SaveCategories();
+        }
+
+        public void AddProduct()
+        {
+            if (string.IsNullOrWhiteSpace(NewProductName))
+                return;
+
+            if (string.IsNullOrWhiteSpace(NewProductUnit))
+                return;
+
+            if (SelectedCategory == null)
+                return;
+
+            Product product = new Product
             {
                 Name = NewProductName,
                 Unit = NewProductUnit,
                 Quantity = NewProductQuantity,
                 CategoryName = SelectedCategory.Name
-            });
+            };
+
+            Products.Add(product);
+            Category targetCategory = Categories.FirstOrDefault(c => c.Name == product.CategoryName);
+            targetCategory?.Products.Add(product);
 
             SaveProducts();
         }
 
-        private void RemoveProduct(Product product)
+        public void RemoveProduct(Product product)
         {
+            if (product == null)
+                return;
+
             Products.Remove(product);
+
+            foreach (Category categoryInList in Categories)
+            {
+                if (categoryInList.Products.Contains(product))
+                {
+                    categoryInList.Products.Remove(product);
+                    break;
+                }
+            }
+
             SaveProducts();
         }
 
-        private void ToggleBought(Product product)
+        public void ToggleBought(Product product)
         {
+            if (product == null)
+                return;
+
             product.IsBought = !product.IsBought;
 
             Products.Remove(product);
-            Products.Add(product);
+
+            if (product.IsBought)
+            {
+                Products.Add(product);
+            }
+            else
+            {
+                int index =0;
+                while (index < Products.Count && !Products[index].IsBought)
+                    index++;
+                Products.Insert(index, product);
+            }
+
+            Category category = Categories.FirstOrDefault(c => c.Name == product.CategoryName);
+            if (category != null)
+            {
+                category.Products.Remove(product);
+
+                if (product.IsBought)
+                    category.Products.Add(product);
+                else
+                {
+                    int categoryIndex =0;
+                    while (categoryIndex < category.Products.Count && !category.Products[categoryIndex].IsBought)
+                        categoryIndex++;
+                    category.Products.Insert(categoryIndex, product);
+                }
+            }
 
             SaveProducts();
         }
 
-        private ObservableCollection<Product> LoadProducts()
+        void LoadProductsIntoCategories()
+        {
+            foreach (Product product in Products)
+            {
+                Category category = Categories.FirstOrDefault(c => c.Name == product.CategoryName);
+                category?.Products.Add(product);
+            }
+        }
+
+        ObservableCollection<Product> LoadProducts()
         {
             string path = Path.Combine(FileSystem.AppDataDirectory, ProductFile);
-            if (!File.Exists(path)) return new();
+            if (!File.Exists(path))
+                return new ObservableCollection<Product>();
 
-            var products = JsonSerializer.Deserialize<ObservableCollection<Product>>(
-                File.ReadAllText(path)) ?? new();
-
-            foreach (var p in products)
-            {
-                p.InitializeCommands();
-            }
-
-            return products;
+            return JsonSerializer.Deserialize<ObservableCollection<Product>>(File.ReadAllText(path))
+                ?? new ObservableCollection<Product>();
         }
 
-
-        private ObservableCollection<Category> LoadCategories()
+        ObservableCollection<Category> LoadCategories()
         {
             string path = Path.Combine(FileSystem.AppDataDirectory, CategoryFile);
-            if (!File.Exists(path)) return new();
-            return JsonSerializer.Deserialize<ObservableCollection<Category>>(File.ReadAllText(path)) ?? new();
+            if (!File.Exists(path))
+                return new ObservableCollection<Category>();
+
+            return JsonSerializer.Deserialize<ObservableCollection<Category>>(File.ReadAllText(path))
+                ?? new ObservableCollection<Category>();
         }
 
-        private void SaveProducts()
+        public void SaveProducts()
         {
             string path = Path.Combine(FileSystem.AppDataDirectory, ProductFile);
             File.WriteAllText(path, JsonSerializer.Serialize(Products, new JsonSerializerOptions { WriteIndented = true }));
+        }
+
+        void SaveCategories()
+        {
+            string path = Path.Combine(FileSystem.AppDataDirectory, CategoryFile);
+            File.WriteAllText(path, JsonSerializer.Serialize(Categories, new JsonSerializerOptions { WriteIndented = true }));
         }
     }
 }

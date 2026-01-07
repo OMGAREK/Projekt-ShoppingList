@@ -1,0 +1,17 @@
+﻿using ShoppingListAW4E.ViewModels;
+namespace ShoppingListAW4E.Views
+{
+    public partial class ShoppingListPage : ContentPage
+    {
+        public ShoppingListPage()
+        {
+            InitializeComponent();
+        }
+
+        void OnAddProductClicked(object sender, EventArgs e)
+        {
+            ShoppingListViewModel viewModel = BindingContext as ShoppingListViewModel;
+            viewModel?.AddProduct();
+        }
+    }
+}

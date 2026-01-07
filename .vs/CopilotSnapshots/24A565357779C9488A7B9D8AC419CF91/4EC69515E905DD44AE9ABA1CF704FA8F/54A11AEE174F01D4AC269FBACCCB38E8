@@ -1,0 +1,81 @@
+﻿using ShoppingListAW4E.Models;
+using System.Collections.ObjectModel;
+using System.Text.Json;
+
+namespace ShoppingListAW4E.ViewModels
+{
+    public class CategoriesViewModel
+    {
+        const string CategoryFile = "categories.json";
+        const string ProductFile = "products.json";
+
+        public ObservableCollection<Category> Categories { get; set; }
+        public string NewCategoryName { get; set; }
+
+        public CategoriesViewModel()
+        {
+            Categories = LoadCategories();
+
+            if (Categories.Count == 0)
+            {
+                Categories.Add(new Category("Warzywa"));
+                Categories.Add(new Category("Owoce"));
+                Categories.Add(new Category("Nabiał"));
+                Categories.Add(new Category("Chemia"));
+                SaveCategories();
+            }
+
+            LoadProductsIntoCategories();
+        }
+
+        public void ToggleCategory(Category category)
+        {
+            category.IsExpanded = !category.IsExpanded;
+        }
+
+        public void AddCategory()
+        {
+            if (string.IsNullOrWhiteSpace(NewCategoryName))
+                return;
+
+            Categories.Add(new Category(NewCategoryName));
+            NewCategoryName = string.Empty;
+            SaveCategories();
+        }
+
+        void LoadProductsIntoCategories()
+        {
+            string path = Path.Combine(FileSystem.AppDataDirectory, ProductFile);
+            if (!File.Exists(path))
+                return;
+
+            ObservableCollection<Product> products =
+                JsonSerializer.Deserialize<ObservableCollection<Product>>(
+                    File.ReadAllText(path)) ?? new();
+
+            foreach (Product product in products)
+            {
+                Category category = Categories.FirstOrDefault(c => c.Name == product.CategoryName);
+                if (category != null)
+                    category.Products.Add(product);
+            }
+        }
+
+        ObservableCollection<Category> LoadCategories()
+        {
+            string path = Path.Combine(FileSystem.AppDataDirectory, CategoryFile);
+            if (!File.Exists(path))
+                return new();
+
+            return JsonSerializer.Deserialize<ObservableCollection<Category>>(
+                File.ReadAllText(path)) ?? new();
+        }
+
+        void SaveCategories()
+        {
+            string path = Path.Combine(FileSystem.AppDataDirectory, CategoryFile);
+            File.WriteAllText(path,
+                JsonSerializer.Serialize(Categories, new JsonSerializerOptions { WriteIndented = true }));
+        }
+    }
+}

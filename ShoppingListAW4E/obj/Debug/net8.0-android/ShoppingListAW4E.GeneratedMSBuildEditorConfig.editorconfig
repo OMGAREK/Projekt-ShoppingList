@@ -48,11 +48,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListAW4E.Resources
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/arkad/source/repos/ShoppingListAW4E/ShoppingListAW4E/Views/CategoriesPage.xaml]
+[C:/Users/arkad/source/repos/ShoppingListAW4E/ShoppingListAW4E/Views/ProductView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListAW4E.Views.CategoriesPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\CategoriesPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\CategoriesPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListAW4E.Views.ProductView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ProductView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ProductView.xaml
 
 [C:/Users/arkad/source/repos/ShoppingListAW4E/ShoppingListAW4E/Views/ShoppingListPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

@@ -1,0 +1,61 @@
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace ShoppingListAW4E.Models
+{
+    // KLASA: Product
+    // Bardzo szczegółowe objaśnienie dla osoby nietechnicznej:
+    // - Obiekt Product to reprezentacja jednego elementu na liście zakupów,
+    // np. "Jabłka" czy "Mleko".
+    // - Klasa przechowuje informacje:
+    // * Name - nazwa produktu
+    // * Unit - jednostka (np. "kg", "szt")
+    // * CategoryName - nazwa kategorii, do której należy produkt
+    // * Quantity - ilość produktu
+    // * IsBought - czy produkt został już kupiony
+    // - Implementujemy INotifyPropertyChanged, aby UI mógł natychmiast
+    // reagować na zmiany wartości (np. zmiana Quantity od razu pokazuje nową liczbę).
+    public class Product : INotifyPropertyChanged
+    {
+        int quantity;
+        bool isBought;
+
+        // NAZWA PRODUKTU
+        public string Name { get; set; }
+        // JEDNOSTKA (np. "kg")
+        public string Unit { get; set; }
+        // NAZWA KATEGORII
+        public string CategoryName { get; set; }
+
+        // ILOŚĆ: właściwość z mechanizmem powiadamiania o zmianie
+        public int Quantity
+        {
+            get => quantity;
+            set
+            {
+                quantity = value;
+                OnPropertyChanged();
+            }
+        }
+
+        // FLAGA: Czy kupione
+        public bool IsBought
+        {
+            get => isBought;
+            set
+            {
+                isBought = value;
+                OnPropertyChanged();
+            }
+        }
+
+        // WYDARZENIE: powiadomienie o zmianie właściwości
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // METODA: powiadomienie — wywołujemy, gdy dana właściwość zmieni swoją wartość
+        void OnPropertyChanged([CallerMemberName] string name = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+    }
+}

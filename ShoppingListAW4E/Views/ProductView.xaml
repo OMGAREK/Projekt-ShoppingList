@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingListAW4E.Views.ProductView">
+
+    <Frame Padding="10" Margin="5">
+        <Grid ColumnDefinitions="2*,Auto,Auto,Auto,Auto"
+              RowDefinitions="Auto,Auto">
+
+            <Label Text="{Binding Name}"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   FontSize="18">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding IsBought}"
+                                 Value="True">
+                        <Setter Property="TextDecorations" Value="Strikethrough"/>
+                        <Setter Property="TextColor" Value="Gray"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   FontSize="12"
+                   TextColor="Gray"
+                   Text="{Binding CategoryName}"/>
+
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   FontSize="12"
+                   TextColor="Gray"
+                   Text="{Binding Unit}"/>
+
+            <Button Text="-"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Clicked="OnDecreaseClicked"/>
+
+            <Entry Grid.Row="0"
+                   Grid.Column="2"
+                   WidthRequest="60"
+                   Keyboard="Numeric"
+                   Text="{Binding Quantity}"/>
+
+            <Button Text="+"
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    Clicked="OnIncreaseClicked"/>
+
+            <Button Text="Kupione"
+                    Grid.Row="0"
+                    Grid.Column="4"
+                    Clicked="OnBoughtClicked"/>
+
+            <Button Text="Usuń"
+                    Grid.Row="1"
+                    Grid.Column="4"
+                    TextColor="Red"
+                    Clicked="OnRemoveClicked"/>
+        </Grid>
+    </Frame>
+</ContentView>
+

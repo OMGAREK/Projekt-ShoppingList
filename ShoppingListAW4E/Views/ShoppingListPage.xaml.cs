@@ -1,9 +1,43 @@
-namespace ShoppingListAW4E.Views;
+using ShoppingListAW4E.Models;
+using ShoppingListAW4E.ViewModels;
 
-public partial class ShoppingListPage : ContentPage
+namespace ShoppingListAW4E.Views
 {
-	public ShoppingListPage()
-	{
-		InitializeComponent();
-	}
+    public partial class ShoppingListPage : ContentPage
+    {
+        public ShoppingListPage()
+        {
+            InitializeComponent();
+        }
+
+        void OnCategoryClicked(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            Category category = button?.BindingContext as Category;
+
+            ShoppingListViewModel viewModel = BindingContext as ShoppingListViewModel;
+            viewModel?.ToggleCategory(category);
+        }
+
+        void OnAddCategoryClicked(object sender, EventArgs e)
+        {
+            ShoppingListViewModel viewModel = BindingContext as ShoppingListViewModel;
+            viewModel?.AddCategory();
+        }
+
+        void OnAddProductClicked(object sender, EventArgs e)
+        {
+            ShoppingListViewModel viewModel = BindingContext as ShoppingListViewModel;
+            viewModel?.AddProduct();
+        }
+
+        void OnRemoveCategoryClicked(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            Category category = button?.BindingContext as Category;
+
+            ShoppingListViewModel viewModel = BindingContext as ShoppingListViewModel;
+            viewModel?.RemoveCategory(category);
+        }
+    }
 }
