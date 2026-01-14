@@ -29,265 +29,265 @@
     <AppXManifest Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-12-15T16:51:05.823</Modified>
+      <Modified>2026-01-13T15:36:50.615</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-12-14T12:30:03.325</Modified>
+      <Modified>2026-01-13T15:18:56.474</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ShoppingListAW4E.runtimeconfig.json">
       <PackagePath>ShoppingListAW4E.runtimeconfig.json</PackagePath>
-      <Modified>2025-12-09T12:52:01.192</Modified>
+      <Modified>2025-12-29T15:31:44.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ShoppingListAW4E.dll">
       <PackagePath>ShoppingListAW4E.dll</PackagePath>
-      <Modified>2025-12-15T16:51:04.906</Modified>
+      <Modified>2026-01-13T15:36:49.854</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ShoppingListAW4E.exe</PackagePath>
-      <Modified>2025-12-15T16:51:04.954</Modified>
+      <Modified>2026-01-13T15:36:49.896</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
-      <Modified>2025-12-09T12:50:26.908</Modified>
+      <Modified>2025-12-09T12:50:26.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.155</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.155</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.187</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.203</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.299</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2025-12-09T12:50:26.872</Modified>
+      <Modified>2025-12-09T12:50:26.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2025-12-09T12:50:26.874</Modified>
+      <Modified>2025-12-09T12:50:26.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.901</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.901</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.901</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.901</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.901</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.927</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.927</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2025-12-09T12:50:40.916</Modified>
+      <Modified>2025-12-29T15:22:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\source\repos\ShoppingListAW4E\ShoppingListAW4E\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ShoppingListAW4E.deps.json">
       <PackagePath>ShoppingListAW4E.deps.json</PackagePath>
-      <Modified>2025-12-14T12:30:03.106</Modified>
+      <Modified>2026-01-13T15:18:56.278</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arkad\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

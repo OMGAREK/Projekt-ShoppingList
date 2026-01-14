@@ -1,0 +1,82 @@
+﻿using ShoppingListAW4E.Models;
+using ShoppingListAW4E.ViewModels;
+using System;
+
+namespace ShoppingListAW4E.Views
+{
+    public partial class ProductView : ContentView
+    {
+        public ProductView()
+        {
+            InitializeComponent();
+        }
+
+        void OnDecreaseClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is Product product && product.Quantity > 0)
+            {
+                product.Quantity--;
+            }
+        }
+
+        void OnIncreaseClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is Product product)
+            {
+                product.Quantity++;
+            }
+        }
+
+        void OnBoughtClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is not Product product)
+                return;
+
+            Element parent = this.Parent;
+
+            while (parent != null && parent is not ContentPage)
+                parent = parent.Parent;
+
+            // Support both ShoppingListViewModel and CombinedViewModel
+            if (parent is ContentPage page)
+            {
+                if (page.BindingContext is ShoppingListViewModel svm)
+                {
+                    svm.ToggleBought(product);
+                    return;
+                }
+
+                if (page.BindingContext is CombinedViewModel cvm)
+                {
+                    cvm.ToggleBought(product);
+                    return;
+                }
+            }
+        }
+
+        void OnRemoveClicked(object sender, EventArgs e)
+        {
+            // Szuka strony, na której jesteś
+            Element parent = this.Parent;
+
+            while (parent != null && parent is not ContentPage)
+                parent = parent.Parent;
+
+            if (parent is ContentPage page)
+            {
+                if (page.BindingContext is ShoppingListViewModel svm && BindingContext is Product p1)
+                {
+                    svm.RemoveProduct(p1);
+                    svm.SaveProducts();
+                    return;
+                }
+
+                if (page.BindingContext is CombinedViewModel cvm && BindingContext is Product p2)
+                {
+                    cvm.RemoveProduct(p2);
+                    return;
+                }
+            }
+        }
+    }
+}

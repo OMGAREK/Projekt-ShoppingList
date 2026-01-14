@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|c:\\users\\arkad\\source\\repos\\shoppinglistaw4e\\shoppinglistaw4e\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|solutionrelative:shoppinglistaw4e\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|c:\\users\\arkad\\source\\repos\\shoppinglistaw4e\\shoppinglistaw4e\\views\\shoppinglistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|solutionrelative:shoppinglistaw4e\\views\\shoppinglistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|c:\\users\\arkad\\source\\repos\\shoppinglistaw4e\\shoppinglistaw4e\\views\\productview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|solutionrelative:shoppinglistaw4e\\views\\productview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|c:\\users\\arkad\\source\\repos\\shoppinglistaw4e\\shoppinglistaw4e\\views\\productview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|solutionrelative:shoppinglistaw4e\\views\\productview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|c:\\users\\arkad\\source\\repos\\shoppinglistaw4e\\shoppinglistaw4e\\views\\shoppinglistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|solutionrelative:shoppinglistaw4e\\views\\shoppinglistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|c:\\users\\arkad\\source\\repos\\shoppinglistaw4e\\shoppinglistaw4e\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|solutionrelative:shoppinglistaw4e\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|c:\\users\\arkad\\source\\repos\\shoppinglistaw4e\\shoppinglistaw4e\\viewmodels\\categoriesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|solutionrelative:shoppinglistaw4e\\viewmodels\\categoriesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|c:\\users\\arkad\\source\\repos\\shoppinglistaw4e\\shoppinglistaw4e\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|solutionrelative:shoppinglistaw4e\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|c:\\users\\arkad\\source\\repos\\shoppinglistaw4e\\shoppinglistaw4e\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|solutionrelative:shoppinglistaw4e\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|c:\\users\\arkad\\source\\repos\\shoppinglistaw4e\\shoppinglistaw4e\\viewmodels\\shoppinglistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|solutionrelative:shoppinglistaw4e\\viewmodels\\shoppinglistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|c:\\users\\arkad\\source\\repos\\shoppinglistaw4e\\shoppinglistaw4e\\views\\categoriespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{684970E3-54E6-4476-9B9D-70CF3D548E7F}|ShoppingListAW4E\\ShoppingListAW4E.csproj|solutionrelative:shoppinglistaw4e\\views\\categoriespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 20,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,94 +102,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ShoppingListPage.xaml",
               "DocumentMoniker": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Views\\ShoppingListPage.xaml",
               "RelativeDocumentMoniker": "ShoppingListAW4E\\Views\\ShoppingListPage.xaml",
               "ToolTip": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Views\\ShoppingListPage.xaml",
               "RelativeToolTip": "ShoppingListAW4E\\Views\\ShoppingListPage.xaml",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFgAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAD0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-14T12:24:52.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-04T12:12:41.39Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CategoriesPage.xaml",
-              "DocumentMoniker": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Views\\CategoriesPage.xaml",
-              "RelativeDocumentMoniker": "ShoppingListAW4E\\Views\\CategoriesPage.xaml",
-              "ToolTip": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Views\\CategoriesPage.xaml",
-              "RelativeToolTip": "ShoppingListAW4E\\Views\\CategoriesPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-14T12:23:11.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ShoppingListViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\ViewModels\\ShoppingListViewModel.cs",
-              "RelativeDocumentMoniker": "ShoppingListAW4E\\ViewModels\\ShoppingListViewModel.cs",
-              "ToolTip": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\ViewModels\\ShoppingListViewModel.cs",
-              "RelativeToolTip": "ShoppingListAW4E\\ViewModels\\ShoppingListViewModel.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ShoppingListPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Views\\ShoppingListPage.xaml.cs",
+              "RelativeDocumentMoniker": "ShoppingListAW4E\\Views\\ShoppingListPage.xaml.cs",
+              "ToolTip": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Views\\ShoppingListPage.xaml.cs",
+              "RelativeToolTip": "ShoppingListAW4E\\Views\\ShoppingListPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:50:57.377Z",
+              "WhenOpened": "2026-01-04T12:09:35.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "ProductView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Views\\ProductView.xaml.cs",
+              "RelativeDocumentMoniker": "ShoppingListAW4E\\Views\\ProductView.xaml.cs",
+              "ToolTip": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Views\\ProductView.xaml.cs",
+              "RelativeToolTip": "ShoppingListAW4E\\Views\\ProductView.xaml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:29:44.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductView.xaml",
+              "DocumentMoniker": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Views\\ProductView.xaml",
+              "RelativeDocumentMoniker": "ShoppingListAW4E\\Views\\ProductView.xaml",
+              "ToolTip": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Views\\ProductView.xaml",
+              "RelativeToolTip": "ShoppingListAW4E\\Views\\ProductView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-29T15:29:17.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Models\\Product.cs",
               "RelativeDocumentMoniker": "ShoppingListAW4E\\Models\\Product.cs",
               "ToolTip": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Models\\Product.cs",
               "RelativeToolTip": "ShoppingListAW4E\\Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T15:02:23.95Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "ShoppingListAW4E\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\Models\\Category.cs",
-              "RelativeToolTip": "ShoppingListAW4E\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:02:08.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoriesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\ViewModels\\CategoriesViewModel.cs",
-              "RelativeDocumentMoniker": "ShoppingListAW4E\\ViewModels\\CategoriesViewModel.cs",
-              "ToolTip": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\ViewModels\\CategoriesViewModel.cs",
-              "RelativeToolTip": "ShoppingListAW4E\\ViewModels\\CategoriesViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T13:17:31.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\AppShell.xaml",
               "RelativeDocumentMoniker": "ShoppingListAW4E\\AppShell.xaml",
               "ToolTip": "C:\\Users\\arkad\\source\\repos\\ShoppingListAW4E\\ShoppingListAW4E\\AppShell.xaml",
               "RelativeToolTip": "ShoppingListAW4E\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-09T12:52:35.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T12:52:35.346Z"
             }
           ]
         },

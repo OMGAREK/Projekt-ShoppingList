@@ -63,12 +63,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\CategoriesPage.xaml">
+	  <MauiXaml Update="Views\ProductView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ShoppingListPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 
 </Project>

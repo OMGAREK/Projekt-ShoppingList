@@ -1,0 +1,120 @@
+﻿using ShoppingListAW4E.Models;
+using ShoppingListAW4E.ViewModels;
+using System;
+using Microsoft.Maui.Controls;
+
+namespace ShoppingListAW4E.Views
+{
+    // ProductView - komponent UI odpowiedzialny za prezentację pojedynczego produktu
+    // w liście zakupów oraz za obsługę akcji użytkownika związanych z tym produktem.
+    //
+    // Uwagi ogólne:
+    // - Ten widok jest ContentView i oczekuje, że jego BindingContext będzie
+    // obiektem typu `Product` (modelu reprezentującego pojedynczy produkt).
+    // - Metody poniżej odczytują `BindingContext` aby wykonać operacje na modelu
+    // lub przekazują żądanie do `ShoppingListViewModel` aby ViewModel wykonał
+    // operacje modyfikujące kolekcje i zapisywał zmiany.
+    public partial class ProductView : ContentView
+    {
+        public ProductView()
+        {
+            // Inicjalizacja elementów zdefiniowanych w XAML (layout, controls itp.).
+            InitializeComponent();
+        }
+
+        // OnDecreaseClicked
+        // - Handler wywoływany, gdy użytkownik naciska przycisk zmniejszenia ilości.
+        // - Sprawdza czy BindingContext to instancja Product i czy ilość jest większa
+        // od zera. Jeśli tak, zmniejsza wartość pola `Quantity`.
+        // - Zmiana właściwości powoduje powiadomienie INotifyPropertyChanged w modelu
+        // Product, co automatycznie aktualizuje UI (jeśli XAML jest związany z tą właściwością).
+        void OnDecreaseClicked(object sender, EventArgs e)
+        {
+            // Odczytujemy model powiązany z tym widokiem
+            if (BindingContext is Product product && product.Quantity >0)
+            {
+                // Zmniejszamy ilość o1. Produkt sam powiadomi UI o zmianie.
+                product.Quantity--;
+            }
+        }
+
+        // OnIncreaseClicked
+        // - Handler wywoływany po kliknięciu przycisku zwiększenia ilości.
+        // - Sprawdza BindingContext i zwiększa `Quantity` o1.
+        void OnIncreaseClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is Product product)
+            {
+                // Zwiększamy ilość o1; UI zostanie zaktualizowane przez mechanizm powiadomień.
+                product.Quantity++;
+            }
+        }
+
+        // FindShoppingListViewModel
+        // - Pomocnicza metoda przeszukująca drzewo rodziców (Parent) zaczynając od tego widoku
+        // w poszukiwaniu elementu, którego BindingContext jest typu ShoppingListViewModel.
+        // - Zwraca znaleziony ViewModel lub null jeśli nie znaleziono.
+        //
+        // Dlaczego tak robimy:
+        // - ProductView może być osadzony bezpośrednio wewnątrz strony lub w innych kontenerach.
+        // - Aby wykonać operacje związane z kolekcjami (np. usunięcie produktu, przeorganizowanie listy)
+        // delegujemy zadanie do ViewModelu (Single Responsibility). Ta metoda pozwala na bezpieczne
+        // odnalezienie ViewModelu bez założenia konkretnej struktury UI.
+        ShoppingListViewModel? FindShoppingListViewModel()
+        {
+            Element element = this; // zaczynamy od obecnego widoku (ProductView)
+
+            // Przechodzimy w górę hierarchii wizualnej dopóki nie skończą się rodzice
+            while (element != null)
+            {
+                // Jeżeli bieżący element ma BindingContext typu ShoppingListViewModel,
+                // zwróć go — to ten ViewModel będzie wykonywał operacje na listach.
+                if (element.BindingContext is ShoppingListViewModel foundViewModel)
+                    return foundViewModel;
+
+                // Przejdź do rodzica i powtórz sprawdzenie
+                element = element.Parent;
+            }
+
+            // Jeśli nie znaleziono ViewModelu, zwracamy null. Wywołujący powinien to uwzględnić.
+            return null;
+        }
+
+        // OnBoughtClicked
+        // - Handler oznaczający produkt jako kupiony/odznaczenie kupionego.
+        // - Nie modyfikuje bezpośrednio kolekcji — prosi ViewModel o wykonanie operacji,
+        // ponieważ ViewModel zarządza kolejnością i zapisem do pliku.
+        void OnBoughtClicked(object sender, EventArgs e)
+        {
+            // Upewniamy się, że mamy poprawny model Product jako BindingContext
+            if (BindingContext is not Product product)
+                return; // brak modelu, nic nie rób
+
+            // Znajdź ViewModel obsługujący listę zakupów
+            ShoppingListViewModel? shoppingListViewModel = FindShoppingListViewModel();
+            if (shoppingListViewModel != null)
+            {
+                // Delegujemy operację do ViewModelu — on wykona przełączenie flagi i zaktualizuje kolekcje
+                shoppingListViewModel.ToggleBought(product);
+            }
+            // Jeśli nie znaleziono ViewModelu, nie wykonujemy nic — operacja jest bezpiecznie pominięta.
+        }
+
+        // OnRemoveClicked
+        // - Handler usuwający produkt z listy.
+        // - Również deleguje operację do ViewModelu, aby zachować spójność danych i mechanizm zapisu.
+        void OnRemoveClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is not Product product)
+                return; // brak modelu, nic nie rób
+
+            // Znajdź ViewModel i poproś go o usunięcie produktu
+            ShoppingListViewModel? shoppingListViewModel = FindShoppingListViewModel();
+            if (shoppingListViewModel != null)
+            {
+                // ViewModel usunie produkt z globalnej listy i z listy kategorii, a następnie zapisze zmiany
+                shoppingListViewModel.RemoveProduct(product);
+            }
+        }
+    }
+}

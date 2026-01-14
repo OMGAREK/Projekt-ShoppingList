@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:ShoppingListAW4E.ViewModels"
+             xmlns:views="clr-namespace:ShoppingListAW4E.Views"
+             x:Class="ShoppingListAW4E.Views.ShoppingListPage"
+             Title="Lista zakupów">
+
+    <ContentPage.BindingContext>
+        <viewmodel:ShoppingListViewModel/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <Entry Placeholder="Nazwa produktu"
+               Text="{Binding NewProductName}"/>
+
+        <Entry Placeholder="Ilość"
+               Keyboard="Numeric"
+               Text="{Binding NewProductQuantity}"/>
+
+        <Entry Placeholder="Jednostka"
+               Text="{Binding NewProductUnit}"/>
+
+        <Picker Title="Kategoria"
+                ItemsSource="{Binding Categories}"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding SelectedCategory}"/>
+
+        <Button Text="Dodaj produkt"
+                Clicked="OnAddProductClicked"/>
+
+        <ScrollView>
+            <CollectionView ItemsSource="{Binding Products}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <views:ProductView/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+
+    </VerticalStackLayout>
+</ContentPage>

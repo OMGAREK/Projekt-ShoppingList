@@ -7,12 +7,8 @@
 
     <TabBar>
         <ShellContent
-        Title="Zakupy"
+        Title="Lista zakupów"
         ContentTemplate="{DataTemplate views:ShoppingListPage}" />
-
-        <ShellContent
-        Title="Kategorie"
-        ContentTemplate="{DataTemplate views:CategoriesPage}" />
     </TabBar>
 
 </Shell>

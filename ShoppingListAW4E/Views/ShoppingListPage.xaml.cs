@@ -1,9 +1,98 @@
-namespace ShoppingListAW4E.Views;
+using ShoppingListAW4E.Models;
+using System.Collections.ObjectModel;
+using System.Text.Json;
+using System.IO;
+using System.Linq;
+using Microsoft.Maui.Controls;
 
-public partial class ShoppingListPage : ContentPage
+namespace ShoppingListAW4E.Views
 {
-	public ShoppingListPage()
+	public partial class ShoppingListPage : ContentPage
 	{
-		InitializeComponent();
+		const string ProductFile = "products.json";
+
+		public ObservableCollection<Product> Products { get; set; }
+
+		public ShoppingListPage()
+		{
+			InitializeComponent();
+
+			Products = LoadProducts();
+
+			CollectionView productsCv = this.FindByName<CollectionView>("ProductsCollectionView");
+			if (productsCv != null)
+				productsCv.ItemsSource = Products;
+		}
+
+		void OnAddProductClicked(object sender, EventArgs e)
+		{
+			Entry nameEntry = this.FindByName<Entry>("NewProductNameEntry");
+			Entry unitEntry = this.FindByName<Entry>("NewProductUnitEntry");
+			Entry qtyEntry = this.FindByName<Entry>("NewProductQuantityEntry");
+
+			string name = nameEntry?.Text;
+			string unit = unitEntry?.Text;
+
+			if (!int.TryParse(qtyEntry?.Text, out int qty)) qty = 1;
+
+			if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(unit)) return;
+
+			Product product = new Product
+			{
+				Name = name,
+				Unit = unit,
+				Quantity = qty
+			};
+
+			Products.Add(product);
+
+			if (nameEntry != null) nameEntry.Text = string.Empty;
+			if (qtyEntry != null) qtyEntry.Text = string.Empty;
+			if (unitEntry != null) unitEntry.Text = string.Empty;
+
+			SaveProducts();
+		}
+
+		public void RemoveProduct(Product product)
+		{
+			if (product == null) return;
+
+			Products.Remove(product);
+			SaveProducts();
+		}
+
+		public void ToggleBought(Product product)
+		{
+			if (product == null) return;
+
+			product.IsBought = !product.IsBought;
+
+			Products.Remove(product);
+
+			if (product.IsBought) Products.Add(product);
+			else
+			{
+				int index =0;
+				while (index < Products.Count && !Products[index].IsBought) index++;
+
+				Products.Insert(index, product);
+			}
+
+			SaveProducts();
+		}
+
+		ObservableCollection<Product> LoadProducts()
+		{
+			string path = Path.Combine(FileSystem.AppDataDirectory, ProductFile);
+			if (!File.Exists(path)) return new ObservableCollection<Product>();
+
+			return JsonSerializer.Deserialize<ObservableCollection<Product>>(File.ReadAllText(path)) ?? new ObservableCollection<Product>();
+		}
+
+		public void SaveProducts()
+		{
+			string path = Path.Combine(FileSystem.AppDataDirectory, ProductFile);
+			File.WriteAllText(path, JsonSerializer.Serialize(Products, new JsonSerializerOptions { WriteIndented = true }));
+		}
 	}
 }

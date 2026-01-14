@@ -1,0 +1,58 @@
+﻿using ShoppingListAW4E.Models;
+using ShoppingListAW4E.ViewModels;
+
+namespace ShoppingListAW4E.Views
+{
+    // ShoppingListPage to strona (widok) z listą zakupów.
+    // Ten plik zawiera metody reagujące na kliknięcia przycisków na stronie.
+    public partial class ShoppingListPage : ContentPage
+    {
+        public ShoppingListPage()
+        {
+            InitializeComponent(); // inicjalizuje komponenty zdefiniowane w XAML
+        }
+
+        // HANDLER: OnCategoryClicked
+        // - Wywoływany, gdy użytkownik kliknie przycisk z nazwą kategorii.
+        // - Pobieramy obiekt Category powiązany z przyciskiem i prosimy ViewModel
+        // o przełączenie stanu (rozwinięta/zwinięta).
+        void OnCategoryClicked(object sender, EventArgs e)
+        {
+            Button button = sender as Button; // przycisk, który został kliknięty
+            Category category = button?.BindingContext as Category; // obiekt Category skojarzony z tym przyciskiem
+
+            ShoppingListViewModel viewModel = BindingContext as ShoppingListViewModel; // ViewModel strony
+            viewModel?.ToggleCategory(category); // jeśli istnieje ViewModel, przełącz stan kategorii
+        }
+
+        // HANDLER: OnAddCategoryClicked
+        // - Wywoływany po kliknięciu przycisku dodawania kategorii.
+        // - Po prostu prosimy ViewModel o dodanie kategorii na podstawie danych formularza.
+        void OnAddCategoryClicked(object sender, EventArgs e)
+        {
+            ShoppingListViewModel viewModel = BindingContext as ShoppingListViewModel;
+            viewModel?.AddCategory(); // dodaj nową kategorię
+        }
+
+        // HANDLER: OnAddProductClicked
+        // - Wywoływany po kliknięciu przycisku dodawania produktu.
+        // - Prosimy ViewModel o dodanie produktu wykorzystując dane w formularzu.
+        void OnAddProductClicked(object sender, EventArgs e)
+        {
+            ShoppingListViewModel viewModel = BindingContext as ShoppingListViewModel;
+            viewModel?.AddProduct(); // dodaj nowy produkt
+        }
+
+        // HANDLER: OnRemoveCategoryClicked
+        // - Wywoływany po kliknięciu przycisku usunięcia kategorii.
+        // - Pobieramy Category i prosimy ViewModel o usunięcie tej kategorii oraz produktów w niej.
+        void OnRemoveCategoryClicked(object sender, EventArgs e)
+        {
+            Button button = sender as Button; // przycisk skojarzony z kategorią
+            Category category = button?.BindingContext as Category; // obiekt kategorii
+
+            ShoppingListViewModel viewModel = BindingContext as ShoppingListViewModel;
+            viewModel?.RemoveCategory(category); // usuń kategorię i powiązane produkty
+        }
+    }
+}

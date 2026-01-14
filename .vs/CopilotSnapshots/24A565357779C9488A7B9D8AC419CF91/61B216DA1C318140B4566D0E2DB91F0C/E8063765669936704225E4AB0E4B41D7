@@ -1,0 +1,64 @@
+﻿using ShoppingListAW4E.Models;
+using ShoppingListAW4E.ViewModels;
+using System;
+
+namespace ShoppingListAW4E.Views
+{
+    public partial class ProductView : ContentView
+    {
+        public ProductView()
+        {
+            InitializeComponent();
+        }
+
+        void OnDecreaseClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is Product product && product.Quantity > 0)
+            {
+                product.Quantity--;
+            }
+        }
+
+        void OnIncreaseClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is Product product)
+            {
+                product.Quantity++;
+            }
+        }
+
+        void OnBoughtClicked(object sender, EventArgs e)
+        {
+            if (BindingContext is not Product product)
+                return;
+
+            Element parent = this.Parent;
+
+            while (parent != null && parent is not ContentPage)
+                parent = parent.Parent;
+
+            if (parent is ContentPage page &&
+                page.BindingContext is ShoppingListViewModel vm)
+            {
+                vm.ToggleBought(product);
+            }
+        }
+
+        void OnRemoveClicked(object sender, EventArgs e)
+        {
+            // Szuka strony, na której jesteś
+            Element parent = this.Parent;
+
+            while (parent != null && parent is not ContentPage)
+                parent = parent.Parent;
+
+            if (parent is ContentPage page &&
+                page.BindingContext is ShoppingListViewModel vm &&
+                BindingContext is Product product)
+            {
+                vm.Products.Remove(product);
+                vm.SaveProducts();
+            }
+        }
+    }
+}
