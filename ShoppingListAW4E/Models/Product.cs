@@ -10,7 +10,6 @@ namespace ShoppingListAW4E.Models
 
         public string Name { get; set; }
         public string Unit { get; set; }
-        public string CategoryName { get; set; }
 
         public int Quantity
         {
