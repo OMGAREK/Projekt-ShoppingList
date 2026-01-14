@@ -22,12 +22,6 @@
             </Label>
 
             <Label Grid.Row="1"
-                   Grid.Column="0"
-                   FontSize="12"
-                   TextColor="Gray"
-                   Text="{Binding CategoryName}"/>
-
-            <Label Grid.Row="1"
                    Grid.Column="1"
                    FontSize="12"
                    TextColor="Gray"
